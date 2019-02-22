@@ -1,0 +1,271 @@
+@charset "utf-8";
+@font-face{
+
+font-family: 'RodchenkoCTT';
+
+src: url('font/rodchenkoctt.ttf');
+}
+
+
+*{
+	box-sizing: border-box;
+	font-family: 'Roboto';
+	font-size: 15px;
+	margin:0;
+	padding:0;
+}
+
+
+h1 {
+	font-family: 'RodchenkoCTT','Oswald', arial;
+	font-size: 48px;
+	max-width: 600px;
+	line-height: 48px;
+	letter-spacing: 2px;
+}
+
+h2 {
+	margin-left:15px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 28px;
+	text-transform: uppercase;
+	position: relative;
+
+	
+}
+
+
+
+.header {
+	max-width: 1230px;
+	min-height: 90px;
+	padding:15px 30px;
+	margin: auto;
+	position:relative;
+}
+
+.banner{
+max-width: 1170px;
+	min-height: 120px;
+	padding:60px;
+	margin: auto;
+	margin-bottom: 30px;
+	color:#FFE45C;
+	background: #d80042;
+	
+}
+
+.wave{
+	width: 70px;
+	height: 55px;
+	margin-right:7px;
+	float:left;
+	overflow: hidden;
+	position:relative;
+	
+}
+
+.wave:before{
+	display: block;
+	content:'';
+	width: 45px;
+	height: 50px;
+position: absolute;
+	background: linear-gradient(to right, rgba(255,255,255,1),rgba(255,255,255,0));
+	z-index: 10;
+}
+
+.wave-form{
+
+	width: 535px;
+	height: 20px;
+	background: url("logo.svg")repeat-x;
+	background-size:auto 100%;
+	position:absolute;
+	top:15px;
+	left:-2px;
+	animation: logo 4s  infinite linear;
+}
+
+@keyframes logo{
+	0%{left:-2px;}
+	100%{left:-320px;}
+}
+.logo {
+	font-family: 'RodchenkoCTT', 'Oswald', arial;
+	font-size: 16px;
+	line-height: 14px;
+	width: 150px;
+	min-height: 75px;
+	float:left;
+	color:#d80042;
+	/*
+	background:#d80042;
+	border-radius:7px;
+	*/
+}
+.navigation {
+	position:relative;
+float:right;
+}
+
+.menu {
+list-style:none;
+margin-top: 15px;	
+}
+
+.menu li {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+  display: inline-block;
+  margin-right:20px;
+  text-transform: uppercase;
+	
+}
+.menu li:last-of-type {
+  margin-right:0px;
+}
+
+
+.instruments, .bands {
+	max-width: 900px;
+	min-height: 100px;
+	padding:15px;
+	margin: auto;
+
+
+}
+
+
+
+.instruments-menu {
+display:flex;
+min-height: 200px;
+justify-content: flex-start;
+flex-wrap: wrap;
+
+}
+
+.instruments-menu-item {
+	padding: 15px;
+	flex-basis: 390px;
+	max-width: 390px;
+	min-height: 200px;
+	background: #F5F5F5;
+	font-size: 18px;
+	border-radius: 12px;
+	margin: 15px;
+	flex-shrink: 1;
+
+}
+
+
+.instruments-menu-item-whole-width {
+	padding: 15px;
+	flex-basis: 100%;
+	max-width: 100%;
+	min-height: 200px;
+	background: #F5F5F5;
+	font-size: 18px;
+	border-radius: 12px;
+	margin: 15px;
+	flex-shrink: 1;
+}
+
+
+.bands-cover {
+
+	flex-basis: 390px;
+	max-width: 390px;
+	min-height: 290px;
+	background: #F5F5F5;
+display: flex;
+	align-items:flex-end;
+	border-radius: 12px;
+	margin: 15px;
+	flex-shrink: 1;
+
+}
+
+
+.bands-cover span{
+	font-size:18px;
+	display: block;
+	width: 100%;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	color:#ffffff;
+	padding: 30px;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+
+}
+
+.bands a{
+	display:block;
+	border:2px solid #000000;
+	border-radius: 50px;
+	padding:15px 30px;
+	text-align:center;
+	color:#000000;
+	text-decoration: none;
+	margin:auto;
+	max-width: 150px;
+}
+
+.bio{background: url('bands/biokonstruktor.jpg') no-repeat;
+background-size: cover;
+}
+.zod{background: url('bands/zodiac.jpg') no-repeat;
+background-size: cover;
+}
+.for{background: url('bands/forum.jpg') no-repeat;
+background-size: cover;
+}
+.nrg{background: url('bands/nrg.jpg') no-repeat;
+background-size: cover;
+}
+
+.wrap {
+	max-width: 1230px;
+	min-height: 200px;
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+
+}
+
+#content {
+	flex-basis: 870px;
+	max-width: 870px;
+	min-height: 200px;
+
+}
+.ads {
+	margin-top: 25px;
+	flex-basis: 330px;
+	width: 330px;
+	min-height: 200px;
+	border-left: 1px solid #dddddd;
+	display:flex;
+	justify-content: flex-end;
+}
+
+#ad {
+display: block;
+position: relative;
+width:300px;
+height:600px;
+border:1px solid;
+}
+
+.sticky {
+
+  position: fixed;
+  z-index: 101;
+}
+.stop {
+
+  position: relative;
+  z-index: 101;
+}

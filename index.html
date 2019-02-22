@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Velvet</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+	<div class="header">
+		<div class="wave"><div class="wave-form"></div></div>
+		<div class="logo">Union of<br />Soviet<br />Synth<br />Republics</div>
+		<div class="navigation">
+			<ul class="menu">
+				<li>Instruments</li>
+				<li>Bands</li>
+				<li>Video</li>
+				<li class="li-button">Shop</li>
+			</ul>
+		</div>
+		<div class="menu-inner"></div>
+	</div>
+
+	<div class="banner">
+		<h1>All about<br /> Soviet synth<br /> music</h1>
+	</div>
+
+	<div class="wrap">
+	
+	<div id="content">
+		
+		<div class="instruments">
+		
+		<h2>Instruments</h2>
+	<div class="instruments-menu">
+		<div class="instruments-menu-item"><img src="control-system.svg" alt="" style="width: 65px; height: auto;"><br/>Synthesizers</div>
+		<div class="instruments-menu-item">Keys</div>
+
+		<div class="instruments-menu-item">Drum machines</div>
+		<div class="instruments-menu-item">Vocoders</div>
+	</div>
+	
+		
+	</div>
+	<div class="instruments">
+		
+		<h2>Most interesting instruments</h2>
+		<div class="instruments-menu">
+		<div class="instruments-menu-item-whole-width"></div>
+	</div>
+	</div>	
+		
+		
+		
+	<div class="bands">
+		
+		<h2>Soviet synthpop bands</h2>
+	<div class="instruments-menu">
+		<div class="bands-cover bio "><span>Biokonstructor</span>
+
+		</div>
+		<div class="bands-cover zod"><span>Zodiac</span></div>
+
+		<div class="bands-cover for"><span>Forum</span></div>
+		<div class="bands-cover nrg"><span>NRG</span></div>
+	</div>
+		
+		</div>
+<div class="bands">
+		
+		<a href="#">Show all</a>
+	</div>		
+
+<div class="instruments">
+		
+		<h2>Most interesting bands</h2>
+	<div class="instruments-menu">
+		<div class="instruments-menu-item-whole-width"></div>
+	</div>
+	</div>
+
+			</div>
+
+
+
+
+	<div class="ads">
+		<div id="ad">BANNER<br />300x600</div>
+		</div>
+		
+		
+
+		
+	</div>	
+
+<script>
+(function(){
+var a = document.querySelector('#ad'), b = null, P = 0;
+window.addEventListener('scroll', Ascroll, false);
+document.body.addEventListener('scroll', Ascroll, false);
+function Ascroll() {
+  if (b == null) {
+    var Sa = getComputedStyle(a, ''), s = '';
+    for (var i = 0; i < Sa.length; i++) {
+      if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
+        s += Sa[i] + ': ' +Sa.getPropertyValue(Sa[i]) + '; '
+      }
+    }
+    b = document.createElement('div');
+    b.style.cssText = s + ' box-sizing: border-box; margin-top:30px; width:300px; height:600px;';
+    a.insertBefore(b, a.firstChild);
+    var l = a.childNodes.length;
+    for (var i = 1; i < l; i++) {
+      b.appendChild(a.childNodes[1]);
+    }
+    a.style.height = b.getBoundingClientRect().height + 'px';
+    a.style.padding = '0';
+    a.style.border = '0';
+  }
+  var Ra = a.getBoundingClientRect(),
+      R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('#content').getBoundingClientRect().bottom);  // селектор блока, при достижении нижнего края которого нужно открепить прилипающий элемент
+  if ((Ra.top - P) <= 0) {
+    if ((Ra.top - P) <= R) {
+      b.className = 'stop';
+      b.style.top = - R +'px';
+    } else {
+      b.className = 'sticky';
+      b.style.top = P + 'px';
+    }
+  } else {
+    b.className = '';
+    b.style.top = '';
+  }
+  window.addEventListener('resize', function() {
+    a.children[0].style.width = getComputedStyle(a, '').width
+  }, false);
+}
+})()
+</script>
+</body>
+</html>
