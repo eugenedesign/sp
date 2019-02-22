@@ -213,16 +213,16 @@ display: flex;
 	max-width: 150px;
 }
 
-.bio{background: url('bands/biokonstruktor.jpg') no-repeat;
+.bio{background: url('Bands/biokonstruktor.jpg') no-repeat;
 background-size: cover;
 }
-.zod{background: url('bands/zodiac.jpg') no-repeat;
+.zod{background: url('Bands/zodiac.jpg') no-repeat;
 background-size: cover;
 }
-.for{background: url('bands/forum.jpg') no-repeat;
+.for{background: url('Bands/forum.jpg') no-repeat;
 background-size: cover;
 }
-.nrg{background: url('bands/nrg.jpg') no-repeat;
+.nrg{background: url('Bands/nrg.jpg') no-repeat;
 background-size: cover;
 }
 
